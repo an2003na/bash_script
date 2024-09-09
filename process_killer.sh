@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [ $# -ne 1 ]; then
+	echo "Usage of program is: ./process_killer [filename]"
+	exit 1
+fi
+
 filename=$1
 
 if [ ! -f "$filename" ]; then
